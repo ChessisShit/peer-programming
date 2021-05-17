@@ -21,4 +21,11 @@ public class JunitTest {
 		assertEquals(Runner.goldilocks(100, 80, new int[]{10,20,30,50,200}, new int[]{10,20,30,50,200}).length , 0);
 	}
 	
+	@Test
+	public void calculatorTest() {
+		assertEquals(Runner.calculator(new int [] {2, 4, 8}),"2, 4, 8\n8, 2, 4\n"); 
+		assertEquals(Runner.calculator(new int [] {6, 4, 9}), "");
+	
+	}
+	
 }

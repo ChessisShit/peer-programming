@@ -3,9 +3,9 @@ public class Runner {
 
 	public static void main(String[] args) {
 		
-		for (int item: goldilocks(100, 80, new int[]{10,20,30,100,200}, new int[]{10,20,30,50,200})) {
-			System.out.println(item);
-		}
+		System.out.println(calculator(new int[] {2, 4, 8} ));
+		
+		
 
 	}
 	
@@ -60,5 +60,48 @@ public class Runner {
 		}
 		return output;
 	}
+
+	
+	public static String calculator(int [] input) {
+		int[] inputExt = new int[input.length * 2];
+		for (int y = 0; y < 2; y++) {
+			for (int x= 0; x< input.length; x++) {
+				inputExt[x+(y*input.length)] = input[x];
+			}
+		}
+		
+		String output = "";
+		for (int x = 0; x < input.length; x++) {
+			if (inputExt[0+x] + inputExt[1+x] == inputExt[2+x]) {
+				output += inputExt[0+x]+", " + inputExt[1+x]+", "+inputExt[2+x] + "\n";
+			}
+			if (inputExt[0+x] - inputExt[1+x] == inputExt[2+x]) {
+				output += inputExt[0+x]+", " + inputExt[1+x]+", "+inputExt[2+x]+ "\n";		
+			}
+			if (inputExt[0+x] * inputExt[1+x] == inputExt[2+x]) {
+				output += inputExt[0+x]+", " + inputExt[1+x]+", "+inputExt[2+x] + "\n";
+			}
+			if (inputExt[0+x] / inputExt[1+x] == inputExt[2+x]) {
+				output += inputExt[0+x]+", " + inputExt[1+x]+", "+inputExt[2+x]+ "\n";
+			}
+		}
+		return output;
+	}
+	
+	
+	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
