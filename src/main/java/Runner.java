@@ -3,7 +3,7 @@ public class Runner {
 
 	public static void main(String[] args) {
 		
-		System.out.println(reverseFactorial(150));
+		System.out.println(dogo (5));
 
 	}
 	
@@ -23,4 +23,33 @@ public class Runner {
 		return counter+"!";
 		
 	}
+	
+	
+	public static String dogo(int input) {
+		String output = "";
+		for (int x = 1; x <= 100; x++)
+		{	
+		if (x != input) {
+			
+			if (x % 10 == 2) {
+			
+				output += x + "nd, ";
+						
+			} else if (x % 10 == 3)  {
+				
+				output += x + "rd, ";
+				
+				
+			} else {
+				output += x + "th, ";
+			}
+			
+			
+			
+		}
+					
+		}
+	return output.substring(0, output.length()-2);
+	}
+	
 }
